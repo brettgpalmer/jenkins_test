@@ -1,3 +1,5 @@
+@Library('sharedLibrary')
+
 pipeline {
     agent none
     environment {
