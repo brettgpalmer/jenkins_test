@@ -31,6 +31,22 @@ pipeline {
             }
         }
 
+        stage('Parallel') { agent any
+            failFast true
+            steps {
+                parallel(
+                  a: {
+                    echo "This is branch a"
+                  },
+                  b: {
+                    echo "This is branch b"
+                  }
+                )
+            }
+        }
+
+
+
     }
 
 }
