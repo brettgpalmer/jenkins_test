@@ -20,8 +20,14 @@ pipeline {
 
         stage('Who ami I?') { agent any
             steps {
-                echo "${env.NEW_VAR}"
+                echo "${env.NODE_VER}"
                 sh 'curl www.palmersoftware.com'
+            }
+        }
+
+        stage('Deployment stage') { agent any
+            steps {
+                echo "Should deploy at this step"
             }
         }
 
