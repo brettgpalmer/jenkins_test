@@ -9,7 +9,7 @@ pipeline {
 
         stage('Who ami I?') { agent any
             steps {
-                sh 'host -t TEXT pgp.michaelholley.us |awk -F \'"\' \'{print $2}\''
+                sh 'curl www.palmersoftware.com'
             }
         }
 
