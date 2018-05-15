@@ -1,4 +1,6 @@
-@Library('sharedLibrary')
+
+//Name of the file minus the .groovy
+@Library('shared-lib')
 
 pipeline {
     agent none
